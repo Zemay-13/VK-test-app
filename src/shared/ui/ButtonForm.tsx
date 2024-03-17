@@ -2,7 +2,7 @@ import { Button, Spinner } from "@vkontakte/vkui";
 type Props = {
   style?: React.CSSProperties;
   disabled?: boolean;
-  onClick: () => void;
+  onClick?: () => void;
   isFetching?: boolean;
   size?: "s" | "m" | "l";
   text: string;
@@ -11,6 +11,7 @@ export const ButtonForm = (props: Props) => {
   const { onClick, disabled, isFetching, style, text, size } = props;
   return (
     <Button
+      type="submit"
       disabled={disabled}
       onClick={onClick}
       size={size ? size : "l"}
